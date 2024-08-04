@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct NotificationSettingsView: View {
-    let affirmation: Affirmation
     @EnvironmentObject var lnManager: LocalNotificationManager
     @StateObject var viewModel = NotificationSettingsViewModel()
     
     var body: some View {
-        Group {
+        Form {
             HStack {
                 Text("Deadline:")
                     .foregroundStyle(.gray)
@@ -26,33 +25,23 @@ struct NotificationSettingsView: View {
                 }
             }
         }
-        .padding(.leading, 20)
-        .frame(minHeight: 65)
-        .overlay(RoundedRectangle(cornerRadius: 20).stroke(.gray, lineWidth: 1))
-        .padding(.horizontal)
-        
-        Spacer()
-            Button {
-                Task {
-                    let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: viewModel.deadline)
-                    let localNotification = LocalNotification(
-                        identifier: UUID().uuidString,
-                        title: "Твоя аффирмация",
-                        body: affirmation.text,
-                        dateComponents: dateComponents,
-                        repeats: false
-                    )
-                    await lnManager.schedule(localNotification: localNotification)
-                }
-            } label: {
-                Text("Add")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .foregroundColor(.white)
+        .onDisappear {
+            Task {
+                let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: viewModel.deadline)
+                let localNotification = LocalNotification(
+                    identifier: UUID().uuidString,
+                    title: "Твоя аффирмация",
+                    body: viewModel.loadAffirmation(),
+                    dateComponents: dateComponents,
+                    repeats: true
+                )
+                await lnManager.schedule(localNotification: localNotification)
             }
+        }
     }
 }
 
 #Preview {
-    NotificationSettingsView(affirmation: Affirmation(text: "Ты лучшая"))
+    NotificationSettingsView()
+        .environmentObject(LocalNotificationManager())
 }

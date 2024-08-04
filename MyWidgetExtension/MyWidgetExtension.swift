@@ -63,6 +63,10 @@ struct MyWidgetEntryView: View {
                         .customFont(type: .regular, size: 15)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
+                        .padding()
+                        .background(Color.black.opacity(0.4))
+                        .cornerRadius(8)
+                        .padding(.bottom)
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
             }

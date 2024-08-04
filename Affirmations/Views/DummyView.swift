@@ -12,15 +12,16 @@ struct DummyView: View {
     var body: some View {
         LazyVStack {
             DummySection(title: item.title)
-            List {
-                ForEach(item.affirmation, id: \.self) { item in
-                    AffirmationCell(affirmation: item)
-                }
-            }
-            .scrollDisabled(true)
-            .listStyle(.inset)
-            .frame(height: CGFloat(item.affirmation.count) * 70)
-            .padding(.bottom, 110)
+                .padding(.bottom, 110)
+//            List {
+//                ForEach(item.affirmation, id: \.self) { item in
+//                    AffirmationCell(affirmation: item)
+//                }
+//            }
+//            .scrollDisabled(true)
+//            .listStyle(.inset)
+//            .frame(height: CGFloat(item.affirmation.count) * 70)
+//            .padding(.bottom, 110)
         }
         .padding(15)
     }

@@ -5,8 +5,8 @@
 //  Created by Владислав Соколов on 03.08.2024.
 //
 
-import UserNotifications
-import UIKit
+import Foundation
+import NotificationCenter
 
 @MainActor
 class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCenterDelegate {
@@ -19,7 +19,6 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
         notificationCenter.delegate = self
     }
     
-    // Delegate function
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
         await getPendingRequests()
@@ -50,7 +49,16 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
         let content = UNMutableNotificationContent()
         content.title = localNotification.title
         content.body = localNotification.body
-        
+        if let subtitle = localNotification.subtitle {
+            content.subtitle = subtitle
+        }
+        if let bundleImageName = localNotification.bundleImageName {
+            if let url = Bundle.main.url(forResource: bundleImageName, withExtension: "") {
+                if let attachment = try? UNNotificationAttachment(identifier: bundleImageName, url: url) {
+                    content.attachments = [attachment]
+                }
+            }
+        }
         content.sound = .default
         if localNotification.scheduleType == .time {
         guard let timeInterval = localNotification.timeInterval else { return }
@@ -69,10 +77,5 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
     
     func getPendingRequests() async {
         pendingRequests = await notificationCenter.pendingNotificationRequests()
-    }
-
-    func clearRequests() {
-        notificationCenter.removeAllPendingNotificationRequests()
-        pendingRequests.removeAll()
     }
 }

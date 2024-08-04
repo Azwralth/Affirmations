@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingView: View {
     @StateObject var viewModel = SettingViewModel()
+    @EnvironmentObject var lnManager: LocalNotificationManager
     
     
     var body: some View {
@@ -26,6 +27,13 @@ struct SettingView: View {
             .sheet(isPresented: $viewModel.showBackgroundSelection) {
                 BackgroundImages()
                     .padding()
+            }
+            .navigationDestination(isPresented: $viewModel.showReminder) {
+                NotificationSettingsView()
+                    .environmentObject(lnManager)
+            }
+            .task {
+                try? await lnManager.requestAuthorization()
             }
         }
     }
