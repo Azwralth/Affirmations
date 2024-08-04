@@ -27,15 +27,15 @@
 		7620896B2C5A84B20067AF21 /* Nunito-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7620896A2C5A84B20067AF21 /* Nunito-VariableFont.ttf */; };
 		7620896F2C5A8D740067AF21 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7620896E2C5A8D740067AF21 /* StorageManager.swift */; };
 		767071A32C5EC73E008E5B6E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767071A22C5EC73E008E5B6E /* DetailViewModel.swift */; };
+		769BC2002C5FF30A006E3828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762089452C5A3F840067AF21 /* Assets.xcassets */; };
+		769BC2012C5FF30E006E3828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CE9A382C5FEBA400263CA6 /* Assets.xcassets */; };
+		769BC2022C5FF30F006E3828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CE9A382C5FEBA400263CA6 /* Assets.xcassets */; };
 		76C7F14B2C5CE52B00994EF7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F14A2C5CE52B00994EF7 /* SettingView.swift */; };
 		76C7F14D2C5CE53700994EF7 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F14C2C5CE53700994EF7 /* SettingViewModel.swift */; };
 		76C7F14F2C5CF01800994EF7 /* SettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F14E2C5CF01800994EF7 /* SettingViewCell.swift */; };
 		76C7F1512C5CFBA900994EF7 /* BackgroundImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F1502C5CFBA900994EF7 /* BackgroundImages.swift */; };
 		76CE9A312C5FABB800263CA6 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762089682C5A84940067AF21 /* FontManager.swift */; };
 		76CE9A322C5FABBD00263CA6 /* Nunito-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7620896A2C5A84B20067AF21 /* Nunito-VariableFont.ttf */; };
-		76CE9A342C5FE7DE00263CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762089452C5A3F840067AF21 /* Assets.xcassets */; };
-		76CE9A392C5FEBA400263CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CE9A382C5FEBA400263CA6 /* Assets.xcassets */; };
-		76CE9A3A2C5FEBA400263CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CE9A382C5FEBA400263CA6 /* Assets.xcassets */; };
 		76F336C02C5E2D3B001DF0D3 /* BackgroundImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336BF2C5E2D3B001DF0D3 /* BackgroundImagesViewModel.swift */; };
 		76F336C42C5E455C001DF0D3 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336C32C5E455C001DF0D3 /* LocalNotificationManager.swift */; };
 		76F336C62C5E4566001DF0D3 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336C52C5E4566001DF0D3 /* NotificationSettingsView.swift */; };
@@ -402,7 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7620896B2C5A84B20067AF21 /* Nunito-VariableFont.ttf in Resources */,
-				76CE9A392C5FEBA400263CA6 /* Assets.xcassets in Resources */,
+				769BC2012C5FF30E006E3828 /* Assets.xcassets in Resources */,
 				762089462C5A3F840067AF21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,8 +412,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CE9A322C5FABBD00263CA6 /* Nunito-VariableFont.ttf in Resources */,
-				76CE9A342C5FE7DE00263CA6 /* Assets.xcassets in Resources */,
-				76CE9A3A2C5FEBA400263CA6 /* Assets.xcassets in Resources */,
+				769BC2002C5FF30A006E3828 /* Assets.xcassets in Resources */,
+				769BC2022C5FF30F006E3828 /* Assets.xcassets in Resources */,
 				76F336DC2C5E569C001DF0D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,7 +692,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDay;
+				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -720,7 +720,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDay;
+				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDayWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
