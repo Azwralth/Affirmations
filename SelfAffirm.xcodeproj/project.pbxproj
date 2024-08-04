@@ -86,7 +86,7 @@
 		76149D372C5BD73C00078AAC /* Affirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmation.swift; sourceTree = "<group>"; };
 		76149D3F2C5BDA9000078AAC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		76149D412C5BDA9000078AAC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		7620893E2C5A3F830067AF21 /* Affirmations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affirmations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7620893E2C5A3F830067AF21 /* SelfAffirm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfAffirm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		762089412C5A3F830067AF21 /* AffirmationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationsApp.swift; sourceTree = "<group>"; };
 		762089432C5A3F830067AF21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		762089452C5A3F840067AF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		7620893F2C5A3F830067AF21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7620893E2C5A3F830067AF21 /* Affirmations.app */,
+				7620893E2C5A3F830067AF21 /* SelfAffirm.app */,
 				76F336CF2C5E5698001DF0D3 /* MyWidgetExtensionExtension.appex */,
 			);
 			name = Products;
@@ -323,9 +323,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7620893D2C5A3F830067AF21 /* Affirmations */ = {
+		7620893D2C5A3F830067AF21 /* SelfAffirm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7620894C2C5A3F840067AF21 /* Build configuration list for PBXNativeTarget "Affirmations" */;
+			buildConfigurationList = 7620894C2C5A3F840067AF21 /* Build configuration list for PBXNativeTarget "SelfAffirm" */;
 			buildPhases = (
 				7620893A2C5A3F830067AF21 /* Sources */,
 				7620893B2C5A3F830067AF21 /* Frameworks */,
@@ -337,9 +337,9 @@
 			dependencies = (
 				76F336DF2C5E569C001DF0D3 /* PBXTargetDependency */,
 			);
-			name = Affirmations;
+			name = SelfAffirm;
 			productName = Affirmations;
-			productReference = 7620893E2C5A3F830067AF21 /* Affirmations.app */;
+			productReference = 7620893E2C5A3F830067AF21 /* SelfAffirm.app */;
 			productType = "com.apple.product-type.application";
 		};
 		76F336CE2C5E5698001DF0D3 /* MyWidgetExtensionExtension */ = {
@@ -377,7 +377,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 762089392C5A3F830067AF21 /* Build configuration list for PBXProject "Affirmations" */;
+			buildConfigurationList = 762089392C5A3F830067AF21 /* Build configuration list for PBXProject "SelfAffirm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -390,7 +390,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7620893D2C5A3F830067AF21 /* Affirmations */,
+				7620893D2C5A3F830067AF21 /* SelfAffirm */,
 				76F336CE2C5E5698001DF0D3 /* MyWidgetExtensionExtension */,
 			);
 		};
@@ -532,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -589,7 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -616,8 +616,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,9 +626,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -648,8 +653,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,9 +663,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -722,7 +732,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		762089392C5A3F830067AF21 /* Build configuration list for PBXProject "Affirmations" */ = {
+		762089392C5A3F830067AF21 /* Build configuration list for PBXProject "SelfAffirm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7620894A2C5A3F840067AF21 /* Debug */,
@@ -731,7 +741,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7620894C2C5A3F840067AF21 /* Build configuration list for PBXNativeTarget "Affirmations" */ = {
+		7620894C2C5A3F840067AF21 /* Build configuration list for PBXNativeTarget "SelfAffirm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7620894D2C5A3F840067AF21 /* Debug */,
