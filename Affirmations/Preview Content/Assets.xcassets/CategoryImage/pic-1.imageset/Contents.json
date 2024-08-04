@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "moriyama_26747_a_visual_of_a_business_graph_showing_cashflow_go_834b4f23-f456-450b-bbd3-aa1b5b736ffe.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
