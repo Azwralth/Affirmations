@@ -23,10 +23,11 @@ struct BackgroundImages: View {
                                 .overlay {
                                     VStack {
                                         Spacer()
-                                        Text("Я совершенство")
+                                        Text("I'm perfect")
                                             .multilineTextAlignment(.center)
-                                            .customFont(type: .bold, size: 16)
+                                            .customFont(type: .bold, size: 19)
                                             .foregroundStyle(.white)
+                                            .padding(.top, 15)
                                         
                                         Spacer()
                                         
