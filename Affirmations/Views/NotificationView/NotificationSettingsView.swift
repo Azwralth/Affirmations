@@ -22,6 +22,9 @@ struct NotificationSettingsView: View {
                         .colorScheme(.dark)
                         .padding(.trailing, 10)
                         .tint(.white)
+                } else {
+                    Text("Уведомления отключены")
+                        .foregroundStyle(.gray)
                 }
             }
         }

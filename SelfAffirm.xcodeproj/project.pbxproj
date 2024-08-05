@@ -44,9 +44,7 @@
 		76F336D02C5E5698001DF0D3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76149D3F2C5BDA9000078AAC /* WidgetKit.framework */; };
 		76F336D12C5E5698001DF0D3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76149D412C5BDA9000078AAC /* SwiftUI.framework */; };
 		76F336D42C5E5698001DF0D3 /* MyWidgetExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336D32C5E5698001DF0D3 /* MyWidgetExtensionBundle.swift */; };
-		76F336D62C5E5698001DF0D3 /* MyWidgetExtensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336D52C5E5698001DF0D3 /* MyWidgetExtensionLiveActivity.swift */; };
 		76F336D82C5E5698001DF0D3 /* MyWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336D72C5E5698001DF0D3 /* MyWidgetExtension.swift */; };
-		76F336DA2C5E5698001DF0D3 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F336D92C5E5698001DF0D3 /* AppIntent.swift */; };
 		76F336DC2C5E569C001DF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F336DB2C5E569C001DF0D3 /* Assets.xcassets */; };
 		76F336E02C5E569C001DF0D3 /* MyWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 76F336CF2C5E5698001DF0D3 /* MyWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		76F336E42C5E610D001DF0D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762089632C5A844D0067AF21 /* Item.swift */; };
@@ -54,7 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		76F336DE2C5E569C001DF0D3 /* PBXContainerItemProxy */ = {
+		76C756952C6000650045445F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 762089362C5A3F830067AF21 /* Project object */;
 			proxyType = 1;
@@ -116,9 +114,7 @@
 		76F336C92C5E47E6001DF0D3 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		76F336CF2C5E5698001DF0D3 /* MyWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F336D32C5E5698001DF0D3 /* MyWidgetExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetExtensionBundle.swift; sourceTree = "<group>"; };
-		76F336D52C5E5698001DF0D3 /* MyWidgetExtensionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetExtensionLiveActivity.swift; sourceTree = "<group>"; };
 		76F336D72C5E5698001DF0D3 /* MyWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetExtension.swift; sourceTree = "<group>"; };
-		76F336D92C5E5698001DF0D3 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		76F336DB2C5E569C001DF0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F336DD2C5E569C001DF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,9 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				76F336D32C5E5698001DF0D3 /* MyWidgetExtensionBundle.swift */,
-				76F336D52C5E5698001DF0D3 /* MyWidgetExtensionLiveActivity.swift */,
 				76F336D72C5E5698001DF0D3 /* MyWidgetExtension.swift */,
-				76F336D92C5E5698001DF0D3 /* AppIntent.swift */,
 				76F336DB2C5E569C001DF0D3 /* Assets.xcassets */,
 				76F336DD2C5E569C001DF0D3 /* Info.plist */,
 			);
@@ -335,7 +329,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				76F336DF2C5E569C001DF0D3 /* PBXTargetDependency */,
+				76C756962C6000650045445F /* PBXTargetDependency */,
 			);
 			name = SelfAffirm;
 			productName = Affirmations;
@@ -460,9 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F336E42C5E610D001DF0D3 /* Item.swift in Sources */,
-				76F336D62C5E5698001DF0D3 /* MyWidgetExtensionLiveActivity.swift in Sources */,
 				76CE9A312C5FABB800263CA6 /* FontManager.swift in Sources */,
-				76F336DA2C5E5698001DF0D3 /* AppIntent.swift in Sources */,
 				76F336D42C5E5698001DF0D3 /* MyWidgetExtensionBundle.swift in Sources */,
 				76F336E52C5E612C001DF0D3 /* Affirmation.swift in Sources */,
 				76F336D82C5E5698001DF0D3 /* MyWidgetExtension.swift in Sources */,
@@ -472,10 +464,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		76F336DF2C5E569C001DF0D3 /* PBXTargetDependency */ = {
+		76C756962C6000650045445F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 76F336CE2C5E5698001DF0D3 /* MyWidgetExtensionExtension */;
-			targetProxy = 76F336DE2C5E569C001DF0D3 /* PBXContainerItemProxy */;
+			targetProxy = 76C756952C6000650045445F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,7 +616,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDay;
+				PRODUCT_BUNDLE_IDENTIFIER = home.SelfAffirmation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -661,7 +653,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDay;
+				PRODUCT_BUNDLE_IDENTIFIER = home.SelfAffirmation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -692,12 +684,16 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = home.SelfAffirmation.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -720,12 +716,16 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.AffirmationsEveryDayWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = home.SelfAffirmation.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
