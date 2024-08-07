@@ -8,7 +8,15 @@
 import Foundation
 
 class NotificationSettingsViewModel: ObservableObject {
-    @Published var deadline = Date()
+    @Published var deadline: Date {
+        didSet {
+            saveDeadline(deadline)
+        }
+    }
+    
+    init() {
+        self.deadline = UserDefaults.standard.object(forKey: "deadline") as? Date ?? Date()
+    }
     
     func loadAffirmation() -> String {
         if let data = UserDefaults(suiteName: "group.AffirmationsEveryDay")?.data(forKey: "selectedCategory"),
@@ -20,16 +28,20 @@ class NotificationSettingsViewModel: ObservableObject {
     }
     
     func scheduleNotification(for date: Date) {
-            Task {
-                let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
-                let localNotification = LocalNotification(
-                    identifier: UUID().uuidString,
-                    title: "Твоя аффирмация",
-                    body: loadAffirmation(),
-                    dateComponents: dateComponents,
-                    repeats: true
-                )
-                await LocalNotificationManager().schedule(localNotification: localNotification)
-            }
+        Task {
+            let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
+            let localNotification = LocalNotification(
+                identifier: UUID().uuidString,
+                title: "Твоя аффирмация",
+                body: loadAffirmation(),
+                dateComponents: dateComponents,
+                repeats: true
+            )
+            await LocalNotificationManager().schedule(localNotification: localNotification)
         }
+    }
+    
+    private func saveDeadline(_ deadline: Date) {
+        UserDefaults.standard.set(deadline, forKey: "deadline")
+    }
 }
