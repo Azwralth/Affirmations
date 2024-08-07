@@ -14,31 +14,22 @@ struct NotificationSettingsView: View {
     var body: some View {
         Form {
             HStack {
-                Text("Deadline:")
+                Text("Ежедневно в:")
                     .foregroundStyle(.gray)
                 Spacer()
                 if lnManager.isGranted {
-                    DatePicker("", selection: $viewModel.deadline)
+                    DatePicker("", selection: $viewModel.deadline, displayedComponents: .hourAndMinute)
                         .colorScheme(.dark)
                         .padding(.trailing, 10)
                         .tint(.white)
+                        .onChange(of: viewModel.deadline) { _, newValue in
+                            lnManager.clearRequests()
+                            viewModel.scheduleNotification(for: newValue)
+                        }
                 } else {
                     Text("Уведомления отключены")
                         .foregroundStyle(.gray)
                 }
-            }
-        }
-        .onDisappear {
-            Task {
-                let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: viewModel.deadline)
-                let localNotification = LocalNotification(
-                    identifier: UUID().uuidString,
-                    title: "Твоя аффирмация",
-                    body: viewModel.loadAffirmation(),
-                    dateComponents: dateComponents,
-                    repeats: true
-                )
-                await lnManager.schedule(localNotification: localNotification)
             }
         }
     }

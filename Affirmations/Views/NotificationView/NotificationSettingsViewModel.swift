@@ -18,4 +18,18 @@ class NotificationSettingsViewModel: ObservableObject {
             return "Нет доступных аффирмаций"
         }
     }
+    
+    func scheduleNotification(for date: Date) {
+            Task {
+                let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
+                let localNotification = LocalNotification(
+                    identifier: UUID().uuidString,
+                    title: "Твоя аффирмация",
+                    body: loadAffirmation(),
+                    dateComponents: dateComponents,
+                    repeats: true
+                )
+                await LocalNotificationManager().schedule(localNotification: localNotification)
+            }
+        }
 }

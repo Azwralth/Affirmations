@@ -78,4 +78,9 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
     func getPendingRequests() async {
         pendingRequests = await notificationCenter.pendingNotificationRequests()
     }
+    
+    func clearRequests() {
+        notificationCenter.removeAllPendingNotificationRequests()
+        pendingRequests.removeAll()
+    }
 }
