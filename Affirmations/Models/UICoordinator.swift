@@ -10,22 +10,16 @@ import Observation
 
 @Observable
 class UICoordinator {
-    /// Shared view properties between Home and Detail View
     var scrollView: UIScrollView = .init(frame: .zero)
     var rect: CGRect = .zero
     var selectedItem: Item?
-    /// Animation Layer Properties
     var animationLayer: UIImage?
     var animateView = false
     var hideLayer = false
-    /// Root View Properties
     var hideRootView =  false
         
-    /// Detail View Properties
     var headerOffset: CGFloat = .zero
-    
-    /// This will capture a screenshot of the scrollview's visible region,
-    /// not complete scroll content.
+
     func createVisibleAreaSnapshot() {
         let renderer = UIGraphicsImageRenderer(size: scrollView.bounds.size)
         let image = renderer.image { ctx in
@@ -39,13 +33,10 @@ class UICoordinator {
     func toogleView(show: Bool, frame: CGRect, post: Item) {
         if show {
           selectedItem = post
-            /// Storing view's Rect
             rect = frame
-            /// Generating ScrollView's visible area snapshot
             createVisibleAreaSnapshot()
             hideRootView = true
             
-            /// Animating View
             withAnimation(.easeInOut(duration: 0.3), completionCriteria: .removed) {
                 animateView = true
             } completion: {
@@ -72,7 +63,6 @@ class UICoordinator {
     }
 }
 
-/// This will extract the UIKit ScrollView from the SwiftUI ScrollView
 struct ScrollViewExtractor: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {
 

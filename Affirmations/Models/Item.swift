@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Item: Identifiable, Codable, Hashable {
-    private (set) var id: UUID = .init()
+    private(set) var id: UUID = .init()
     let title: String
     let image: String?
     let description: String

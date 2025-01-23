@@ -1,0 +1,38 @@
+{
+  "images" : [
+    {
+      "filename" : "ybrikeeg_App_icon_for_an_app_about_manifesting_and_positive_aff_af66beac-6f17-4254-8333-2975d4d3bb57.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "ybrikeeg_App_icon_for_an_app_about_manifesting_and_positive_aff_af66beac-6f17-4254-8333-2975d4d3bb57 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "tinted"
+        }
+      ],
+      "filename" : "ybrikeeg_App_icon_for_an_app_about_manifesting_and_positive_aff_af66beac-6f17-4254-8333-2975d4d3bb57 2.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
